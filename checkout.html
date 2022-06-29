@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Checkout</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220629184024">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__body">
+					<a href="" class="header__logo">
+						<img class="header__logo header__logo_big" src="img/logo-big.svg" alt="logo">
+						<img class="header__logo header__logo_small" src="img/logo.svg" alt="logo">
+					</a>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="home.html" class="menu__link  undefined">Home</a></li>
+								<li class="menu__item"><a href="product.html" class="menu__link undefined">Shop</a></li>
+								<li class="menu__item"><a href="" class="menu__link undefined care">Plant Care</a></li>
+								<li class="menu__item"><a href="" class="menu__link undefined">Blogs</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__right">
+						<button type="button" class="header__search">
+							<form class="header__form" action="">
+								<img src="img/search.svg" alt="search">
+								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="header__input">
+							</form>
+						</button>
+						<a class="header__cart" href="product-cart.html">
+							<img src="img/cart.svg" alt="cart">
+							<span>6</span>
+						</a>
+						<a data-popup="#popup-login" class="header__login button" href="">Login</a>
+					</div>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__breadcrumbs breadcrumbs">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item">
+							<a href="" class="breadcrumbs__link">Home</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<a href="" class="breadcrumbs__link">Shop</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<span class="breadcrumbs__current">Checkout</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<form action="" class="page__checkout checkout-page">
+				<div class="checkout-page__container">
+					<div class="checkout-page__top">
+						<div class="checkout-page__title">Billing Address</div>
+						<div class="checkout-page__title checkout-page__title-order">Your Order</div>
+					</div>
+					<div class="checkout-page__items">
+						<div class="checkout-page__body">
+							<div class="checkout-page__form form-checkout" action="">
+
+								<div class="form-checkout__line">
+									<label for="fname">First Name</label>
+									<label for="lname">Last Name</label>
+									<input id="fname" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-checkout__input">
+									<input id="lname" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-checkout__input">
+								</div>
+
+								<div class="form-checkout__line">
+									<label for="country">Country / Region</label>
+									<label for="city">Town / City</label>
+									<select id="country" name="form[]" class="form-checkout__select">
+										<option value="1" selected>Select a country / region</option>
+										<option value="2">Czech Republic</option>
+										<option value="3">Ukraine</option>
+										<option value="4">United States of America</option>
+									</select>
+									<input id="city" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-checkout__input">
+								</div>
+
+								<div class="form-checkout__line">
+									<label for="street">Street Address</label>
+									<div></div>
+									<input id="street" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="House number and street name" class="form-checkout__input">
+
+									<input id="address" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Appartment, suite, unit, etc. (optional)" class="form-checkout__input">
+								</div>
+
+								<div class="form-checkout__line">
+									<label for="state">State</label>
+									<label for="zip">Zip</label>
+									<select id="state" name="form[]" class="form-checkout__select">
+										<option value="1" selected>Select a state</option>
+										<option value="2">Czech Republic</option>
+										<option value="3">Ukraine</option>
+										<option value="4">United States of America</option>
+									</select>
+									<input id="zip" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-checkout__input">
+								</div>
+
+								<div class="form-checkout__line">
+									<label for="email">Email address</label>
+									<label for="phone">Phone Number</label>
+									<input id="email" autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="" class="form-checkout__input">
+									<!--  -->
+									<select name="form[]" class="form-checkout__select-num">
+										<option value="1" selected>+966</option>
+										<option value="2">+380</option>
+										<option value="3">+740</option>
+										<option value="4">+250</option>
+									</select>
+
+
+									<input id="phone" autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="" class="form-checkout__input-num">
+									<!--  -->
+								</div>
+
+								<div class="form-checkout__checkbox checkbox">
+									<input id="ship" data-error="Ошибка" class="form-checkout__checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="ship" class="form-checkout__checkbox__label"><span class="form-checkout__checkbox__text">Ship to a different
+											address?</span></label>
+								</div>
+
+								<div class="form-checkout__textarea textarea-form">
+									<label for="Order" class="textarea-form__label">Order notes (optional)</label>
+									<textarea id="Order" autocomplete="off" name="textarea" placeholder="" data-error="Ошибка" class="textarea-form__input"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="checkout-page__order order-checkout">
+							<div class="checkout-page__title checkout-page__title-orders">Your Order</div>
+							<div class="order-checkout__top">
+								<div class="order-checkout__title">Products</div>
+								<div class="order-checkout__title">Subtotal</div>
+							</div>
+							<div class="order-checkout__items">
+
+								<div class="order-checkout__item item-order-checkout">
+									<div class="item-order-checkout__images-ibg">
+										<picture><source srcset="img/checkout/image1.webp" type="image/webp"><img src="img/checkout/image1.png" alt="images"></picture>
+									</div>
+									<div class="item-order-checkout__body">
+										<div class="item-order-checkout__name">
+											<div class="item-order-checkout__title">Barberton Daisy</div>
+											<div class="item-order-checkout__articul"><span>SKU:</span>1995751877966</div>
+										</div>
+										<div class="item-order-checkout__number">(x 2)</div>
+										<div class="item-order-checkout__total">$238.00</div>
+									</div>
+								</div>
+
+								<div class="order-checkout__item item-order-checkout">
+									<div class="item-order-checkout__images-ibg">
+										<picture><source srcset="img/checkout/image2.webp" type="image/webp"><img src="img/checkout/image2.png" alt="images"></picture>
+									</div>
+									<div class="item-order-checkout__body">
+										<div class="item-order-checkout__name">
+											<div class="item-order-checkout__title">Barberton Daisy</div>
+											<div class="item-order-checkout__articul"><span>SKU:</span>1995751877966</div>
+										</div>
+										<div class="item-order-checkout__number">(x 2)</div>
+										<div class="item-order-checkout__total">$238.00</div>
+									</div>
+								</div>
+
+								<div class="order-checkout__item item-order-checkout">
+									<div class="item-order-checkout__images-ibg">
+										<picture><source srcset="img/checkout/image3.webp" type="image/webp"><img src="img/checkout/image3.png" alt="images"></picture>
+									</div>
+									<div class="item-order-checkout__body">
+										<div class="item-order-checkout__name">
+											<div class="item-order-checkout__title">Barberton Daisy</div>
+											<div class="item-order-checkout__articul"><span>SKU:</span>1995751877966</div>
+										</div>
+										<div class="item-order-checkout__number">(x 2)</div>
+										<div class="item-order-checkout__total">$238.00</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="checkout-page__code"><span>Have a coupon code?</span>
+								<a href="">Click here</a>
+							</div>
+							<div class="total-cart__inner">
+								<div class="total-cart__subtotal"><span>Subtotal</span>$2,683.00</div>
+								<div class="total-cart__discount"><span>Coupon Discount</span>(-) 00.00</div>
+								<div class="total-cart__shipping"><span>Shiping</span>$16.00</div>
+								<div class="total-cart__view">View shipping charge</div>
+								<div class="total-cart__sum"><span>Total</span>$2,699.00</div>
+							</div>
+
+							<div class="checkout-page__pay pay-checkout">
+								<div class="pay-checkout__title">Payment Method</div>
+								<div class="pay-checkout__options options-pay">
+									<div class="options__item">
+										<input hidden id="pay" class="options__input" checked type="radio" value="1" name="option">
+										<label for="pay" class="options__label"><span class="options__text"><picture><source srcset="img/checkout/pay.webp" type="image/webp"><img src="img/checkout/pay.png" alt="pay"></picture></span></label>
+									</div>
+									<div class="options__item">
+										<input hidden id="dorect" class="options__input" type="radio" value="2" name="option">
+										<label for="dorect" class="options__label"><span class="options__text">Dorect bank
+												transfer</span></label>
+									</div>
+									<div class="options__item">
+										<input hidden id="cash" class="options__input" type="radio" value="2" name="option">
+										<label for="cash" class="options__label"><span class="options__text">Cash on
+												delivery</span></label>
+									</div>
+								</div>
+							</div>
+							<div class="checkout-page__button">
+								<a data-popup="#popup-order" href="" class="checkout-page__btn button">Place Order</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__top top-footer">
+					<div class="top-footer__body">
+						<div class="top-footer__items">
+							<div class="top-footer__item item-top-footer">
+								<div class="item-top-footer__images">
+									<picture><source srcset="img/footer/item1.webp" type="image/webp"><img src="img/footer/item1.png" alt=""></picture>
+								</div>
+								<h3 class="item-top-footer__title">Garden Care</h3>
+								<p class="item-top-footer__text">We are an online plant shop offering a wide range of cheap and trendy
+									plants.</p>
+							</div>
+							<div class="top-footer__item item-top-footer">
+								<div class="item-top-footer__images">
+									<picture><source srcset="img/footer/item2.webp" type="image/webp"><img src="img/footer/item2.png" alt=""></picture>
+								</div>
+								<h3 class="item-top-footer__title">Plant Renovation</h3>
+								<p class="item-top-footer__text">We are an online plant shop offering a wide range of cheap and trendy
+									plants.</p>
+							</div>
+							<div class="top-footer__item item-top-footer">
+								<div class="item-top-footer__images">
+									<picture><source srcset="img/footer/item3.webp" type="image/webp"><img src="img/footer/item3.png" alt=""></picture>
+								</div>
+								<h3 class="item-top-footer__title">Watering Graden</h3>
+								<p class="item-top-footer__text">We are an online plant shop offering a wide range of cheap and trendy
+									plants.</p>
+							</div>
+						</div>
+						<div class="top-footer__form form-top-footer">
+							<h3 class="form-top-footer__title">Would you like to join newsletters?</h3>
+							<form class="form-top-footer__search" action="">
+								<label for=""></label>
+								<input autocomplete="off" type="mail" name="form[]" data-error="Ошибка" placeholder="enter your email address..." class="form-top-footer__input">
+								<button type="submit" class="form-top-footer__button button">Join</button>
+							</form>
+							<p class="form-top-footer__text">We usually post offers and challenges in newsletter. We’re your online
+								houseplant destination. We offer a wide range of houseplants and accessories shipped directly from our
+								(green)house to yours! </p>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer__info info-footer">
+					<a href="" class="info-footer__logo">
+						<img class="info-footer__logo" src="img/logo-big.svg" alt="logo">
+					</a>
+					<div class="info-footer__name">
+						<div class="info-footer__location">70 West Buckingham Ave.
+							Farmingdale, NY 11735</div>
+						<div class="info-footer__email">contact@greenshop.com</div>
+						<a href="tel:+8801911717490" class="info-footer__phone">+88 01911 717 490</a>
+					</div>
+				</div>
+
+				<div class="footer__bottom bootom-footer">
+					<div class="bootom-footer__items">
+						<div class="bootom-footer__item item-bootom-footer">
+							<h3 class="item-bootom-footer__title">My Account</h3>
+							<ul class="item-bootom-footer__list">
+								<li class="item-bootom-footer__item">
+									<a href="" class="item-bootom-footer__link">My Account</a>
+								</li>
+								<li class="item-bootom-footer__item">
+									<a href="" class="item-bootom-footer__link">Our stores</a>
+								</li>
+								<li class="item-bootom-footer__item">
+									<a href="" class="item-bootom-footer__link">Contact us</a>
+								</li>
+								<li class="item-bootom-footer__item">
+									<a href="" class="item-bootom-footer__link">Career</a>
+								</li>
+								<li class="item-bootom-footer__item">
+									<a href="" class="item-bootom-footer__link">Specials</a>
+								</li>
+							</ul>
+						</div>
+						<div class="bootom-footer__item item-bootom-footer">
+							<h3 class="item-bootom-footer__title">Help & Guide</h3>
+							<ul class="item-bootom-footer__list">
+								<li class="item-bootom-footer__item">
+									<a href="" class="item-bootom-footer__link">Help Center</a>
+								</li>
+								<li class="item-bootom-footer__item">
+									<a href="" class="item-bootom-footer__link">How to Buy</a>
+								</li>
+								<li class="item-bootom-footer__item">
+									<a href="" class="item-bootom-footer__link">Shipping & Delivery</a>
+								</li>
+								<li class="item-bootom-footer__item">
+									<a href="" class="item-bootom-footer__link">Product Policy</a>
+								</li>
+								<li class="item-bootom-footer__item">
+									<a href="" class="item-bootom-footer__link">How to Return</a>
+								</li>
+							</ul>
+						</div>
+						<div class="bootom-footer__item item-bootom-footer">
+							<h3 class="item-bootom-footer__title">Categories</h3>
+							<ul class="item-bootom-footer__list">
+								<li class="item-bootom-footer__item">
+									<a href="" class="item-bootom-footer__link">House Plants</a>
+								</li>
+								<li class="item-bootom-footer__item">
+									<a href="" class="item-bootom-footer__link">Potter Plants</a>
+								</li>
+								<li class="item-bootom-footer__item">
+									<a href="" class="item-bootom-footer__link">Seeds</a>
+								</li>
+								<li class="item-bootom-footer__item">
+									<a href="" class="item-bootom-footer__link">Small Plants</a>
+								</li>
+								<li class="item-bootom-footer__item">
+									<a href="" class="item-bootom-footer__link">Accessories</a>
+								</li>
+							</ul>
+						</div>
+						<div class="bootom-footer__item item-bootom-footer">
+							<div class="bootom-footer__social social-bootom-footer">
+								<div class="social-bootom-footer__title">Social Media</div>
+								<ul class="social-bootom-footer__list">
+									<li class="social-bootom-footer__item">
+										<a href="" class="social-bootom-footer__link">
+											<img src="img/social/facebook.svg" alt="">
+										</a>
+									</li>
+									<li class="social-bootom-footer__item">
+										<a href="" class="social-bootom-footer__link">
+											<img src="img/social/instagram.svg" alt="">
+										</a>
+									</li>
+									<li class="social-bootom-footer__item">
+										<a href="" class="social-bootom-footer__link">
+											<img src="img/social/twitter.svg" alt="">
+										</a>
+									</li>
+									<li class="social-bootom-footer__item">
+										<a href="" class="social-bootom-footer__link">
+											<img src="img/social/linkedin.svg" alt="">
+										</a>
+									</li>
+									<li class="social-bootom-footer__item">
+										<a href="" class="social-bootom-footer__link">
+											<img src="img/social/union.svg" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="bootom-footer__pay pay-bootom-footer">
+								<div class="pay-bootom-footer__title">We accept</div>
+								<div class="pay-bootom-footer__images">
+									<picture><source srcset="img/social/pay.webp" type="image/webp"><img src="img/social/pay.png" alt=""></picture>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__copy">
+					© 2021 GreenShop. All Rights Reserved.
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- popup-login -->
+	<div id="popup-login" aria-hidden="true" class="popup popup-login">
+		<div class="popup__wrapper popup-login__wrapper">
+			<div class="popup__content popup-login__content">
+				<button data-close type="button" class="popup__close popup-login__close">
+					<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M3.17007 3.17007C3.39682 2.94331 3.76447 2.94331 3.99122 3.17007L9 8.17884L14.0088 3.17007C14.2355 2.94331 14.6032 2.94331 14.8299 3.17007C15.0567 3.39682 15.0567 3.76447 14.8299 3.99122L9.82115 9L14.8299 14.0088C15.0567 14.2355 15.0567 14.6032 14.8299 14.8299C14.6032 15.0567 14.2355 15.0567 14.0088 14.8299L9 9.82116L3.99122 14.8299C3.76447 15.0567 3.39682 15.0567 3.17007 14.8299C2.94331 14.6032 2.94331 14.2355 3.17007 14.0088L8.17884 9L3.17007 3.99122C2.94331 3.76447 2.94331 3.39682 3.17007 3.17007Z" fill="#46A358" />
+					</svg>
+				</button>
+				<div class="popup-login__top">
+					<a href="" class="popup-login__title popup-login__title_active">Login</a>
+					<a data-popup="#popup-register" href="" class="popup-login__title">Register</a>
+				</div>
+				<div class="popup-login__subtitle">Enter your username and password to login.</div>
+				<div class="popup-login__inputs">
+					<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="almamun_uxui@outlook.com" class="popup-login__input">
+					<input autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="enter password" class="popup-login__input popup-login__input_pass">
+				</div>
+				<div class="popup-login__answer">Forgot Password?</div>
+				<button type="button" class="popup-login__button">Login</button>
+				<div class="popup-login__text">
+					<span></span>
+					Or login with
+					<span></span>
+				</div>
+				<div class="popup-login__links">
+					<a href="" class="popup-login__link popup-login__link_google">Login with Google</a>
+					<a href="" class="popup-login__link popup-login__link_facebook">Login with Facebook</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- popup-register -->
+	<div id="popup-register" aria-hidden="true" class="popup popup-login">
+		<div class="popup__wrapper popup-login__wrapper">
+			<div class="popup__content popup-login__content">
+				<button data-close type="button" class="popup__close popup-login__close">
+					<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M3.17007 3.17007C3.39682 2.94331 3.76447 2.94331 3.99122 3.17007L9 8.17884L14.0088 3.17007C14.2355 2.94331 14.6032 2.94331 14.8299 3.17007C15.0567 3.39682 15.0567 3.76447 14.8299 3.99122L9.82115 9L14.8299 14.0088C15.0567 14.2355 15.0567 14.6032 14.8299 14.8299C14.6032 15.0567 14.2355 15.0567 14.0088 14.8299L9 9.82116L3.99122 14.8299C3.76447 15.0567 3.39682 15.0567 3.17007 14.8299C2.94331 14.6032 2.94331 14.2355 3.17007 14.0088L8.17884 9L3.17007 3.99122C2.94331 3.76447 2.94331 3.39682 3.17007 3.17007Z" fill="#46A358" />
+					</svg>
+				</button>
+				<div class="popup-login__top">
+					<a data-popup="#popup-login" href="" class="popup-login__title ">Login</a>
+					<a href="" class="popup-login__title popup-login__title_active">Register</a>
+				</div>
+				<div class="popup-login__subtitle">Enter your email and password to register.</div>
+				<div class="popup-login__inputs">
+					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Username" class="popup-login__input">
+					<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="Enter your email address" class="popup-login__input">
+					<input autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="Password" class="popup-login__input popup-login__input_pass">
+					<input autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="Confirm Password" class="popup-login__input">
+
+				</div>
+				<button type="button" class="popup-login__button">Register</button>
+				<div class="popup-login__text">
+					<span></span>
+					Or login with
+					<span></span>
+				</div>
+				<div class="popup-login__links">
+					<a href="" class="popup-login__link popup-login__link_google">Login with Google</a>
+					<a href="" class="popup-login__link popup-login__link_facebook">Login with Facebook</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--popup-order  -->
+
+	<div id="popup-order" aria-hidden="true" class="popup popup-order">
+		<div class="popup__wrapper popup-order__wrapper">
+			<div class="popup__content popup-order__content">
+				<button data-close type="button" class="popup__close popup-order__close">
+					<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M3.17007 3.17007C3.39682 2.94331 3.76447 2.94331 3.99122 3.17007L9 8.17884L14.0088 3.17007C14.2355 2.94331 14.6032 2.94331 14.8299 3.17007C15.0567 3.39682 15.0567 3.76447 14.8299 3.99122L9.82115 9L14.8299 14.0088C15.0567 14.2355 15.0567 14.6032 14.8299 14.8299C14.6032 15.0567 14.2355 15.0567 14.0088 14.8299L9 9.82116L3.99122 14.8299C3.76447 15.0567 3.39682 15.0567 3.17007 14.8299C2.94331 14.6032 2.94331 14.2355 3.17007 14.0088L8.17884 9L3.17007 3.99122C2.94331 3.76447 2.94331 3.39682 3.17007 3.17007Z" fill="#46A358" />
+					</svg>
+				</button>
+				<div class="popup-order__top">
+					<div class="popup-order__images">
+						<img src="img/popup/order.svg" alt="order">
+					</div>
+					<p class="popup-order__text">Your order has been received</p>
+				</div>
+				<div class="popup-order__details details-order">
+					<div class="details-order__items">
+						<div class="details-order__item">
+							<div class="details-order__name">Order Number</div>
+							<div class="details-order__price">19586687</div>
+						</div>
+						<div class="details-order__item">
+							<div class="details-order__name">Date</div>
+							<div class="details-order__price">15 Sep, 2021</div>
+						</div>
+						<div class="details-order__item">
+							<div class="details-order__name">Total</div>
+							<div class="details-order__price">2,699.00</div>
+						</div>
+						<div class="details-order__item">
+							<div class="details-order__name">Payment Method</div>
+							<div class="details-order__price">Cash on delivery</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup-order__items">
+					<div class="popup-order__title">Order Details</div>
+					<div class="popup-order__name name-order">
+						<div class="name-order__subtitle">Products</div>
+						<div class="name-order__subtitle">Qty</div>
+						<div class="name-order__subtitle">Subtotal</div>
+					</div>
+
+					<div class="popup-order__item item-popup-order">
+						<div class="item-popup-order__images-ibg">
+							<picture><source srcset="img/checkout/image1.webp" type="image/webp"><img src="img/checkout/image1.png" alt="images"></picture>
+						</div>
+						<div class="item-popup-order__body">
+							<div class="item-popup-order__name">
+								<div class="item-popup-order__title">Barberton Daisy</div>
+								<div class="item-popup-order__articul"><span>SKU:</span>1995751877966</div>
+							</div>
+							<div class="item-popup-order__number">(x 2)</div>
+							<div class="item-popup-order__total">$238.00</div>
+						</div>
+					</div>
+
+					<div class="popup-order__item item-popup-order">
+						<div class="item-popup-order__images-ibg">
+							<picture><source srcset="img/checkout/image2.webp" type="image/webp"><img src="img/checkout/image2.png" alt="images"></picture>
+						</div>
+						<div class="item-popup-order__body">
+							<div class="item-popup-order__name">
+								<div class="item-popup-order__title">Barberton Daisy</div>
+								<div class="item-popup-order__articul"><span>SKU:</span>1995751877966</div>
+							</div>
+							<div class="item-popup-order__number">(x 2)</div>
+							<div class="item-popup-order__total">$238.00</div>
+						</div>
+					</div>
+
+					<div class="popup-order__item item-popup-order">
+						<div class="item-popup-order__images-ibg">
+							<picture><source srcset="img/checkout/image3.webp" type="image/webp"><img src="img/checkout/image3.png" alt="images"></picture>
+						</div>
+						<div class="item-popup-order__body">
+							<div class="item-popup-order__name">
+								<div class="item-popup-order__title">Barberton Daisy</div>
+								<div class="item-popup-order__articul"><span>SKU:</span>1995751877966</div>
+							</div>
+							<div class="item-popup-order__number">(x 2)</div>
+							<div class="item-popup-order__total">$238.00</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="popup-order__bottom bottom-order">
+					<div class="bottom-order__body">
+						<div class="bottom-order__shipping">
+							<div class="bottom-order__shipping-name">Shiping</div>
+							<div class="bottom-order__shipping-price">$16.00</div>
+						</div>
+						<div class="bottom-order__total">
+							<div class="bottom-order__total-name">Total</div>
+							<div class="bottom-order__total-price">$2,699.00</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="popup-order__footer">Your order is currently being processed. You will receive an order
+					confirmation email shortly with the expected delivery date for your items.</div>
+				<div class="popup-order__btn">
+					<button type="button" class="popup-order__button button">Track your order</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20220629184024"></script>
+</body>
+
+</html>
